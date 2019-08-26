@@ -10,7 +10,7 @@ var myList = new List("Micah", []);
 
 
 
-//A constructer to create tasks.
+//A constructor to create tasks.
 function createTask(name, details, prioritize, status) {
   this.name = name;
   this.details = details
@@ -25,9 +25,9 @@ var grocery = new title ("groceryList", ["apples", "cookies", "carrots", "kale",
 myList.task.push(grocery);
 
 
-//Creates a method to find a task, searching by name
+//Creates a prototype method to find a task, searching by name
 List.prototype.findTask = function(name) {
-  for (var i=0; i<= this.task.length; i++) {
+  for (var i=0; i< this.task.length; i++) {
     if (this.task[i]) {
       if (this.task[i].name == name) {
         return this.task[i];
@@ -38,11 +38,22 @@ List.prototype.findTask = function(name) {
 }
 
 
+
 //This searches "myList" for a task with the name "groceryList"
 myList.findTask("groceryList");
 
-
-
+//this prototype method updates task status to complete!
+List.prototype.updateStatus = function(name) {
+  for (var i=0; i<this.task.length; i++) {
+    if (this.task[i]) {
+      if (this.task[i].name == name) {
+        this.status= "complete";
+        return;
+      }
+    }
+  };
+  return false;
+}
 
 
 
