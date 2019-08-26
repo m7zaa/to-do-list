@@ -56,9 +56,21 @@ List.prototype.updateStatus = function(name) {
 }
 
 
+//this prototype method deletes a task by searching for name of task.
+List.prototype.deleteTask = function(name) {
+  for (var i=0; i<this.task.length; i++) {
+    if (this.task[i]) {
+      if (this.task[i].name == name) {
+        delete this.task[i];
+        return true;
+      }
+    }
+  };
+  return false;
+}
 
-Task.prototype.deleteTask
-
+// this method deletes the task groceryList from myList
+myList.deleteTask("groceryList");
 
 
 
