@@ -3,10 +3,14 @@ function List(firstName, task) {
   this.task = task;
 }
 
+// var test = List(firstName, task);
+// List.createTask(new);
+// displayContactDetails(addressBook);
 
 //creates entries
 var myToDo = new List("Susan", []);
 var myList = new List("Micah", []);
+
 
 
 
@@ -19,7 +23,7 @@ function createTask(name, details, prioritize, status) {
 }
 
 //Creates a task
-var grocery = new title ("groceryList", ["apples", "cookies", "carrots", "kale", "sushi", "ice cream"], "medium", "not done");
+var grocery = new createTask ("groceryList", ["apples", "cookies", "carrots", "kale", "sushi", "ice cream"], "medium", "not done");
 
 //this added the entire shopping object entry into Micah's list
 myList.task.push(grocery);
@@ -83,8 +87,19 @@ myList.deleteTask("groceryList");
 
 
 $(document).ready(function() {
+  $("#form").submit(function(event){
+    event.preventDefault();
+  var grocery = $("input:radio[name=grocery]:checked").val();
+  var social = $("input:radio[name=social]:checked").val();
+  var work = $("input:radio[name=work]:checked").val();
+  var school = $("input:radio[name=school]:checked").val();
+  var transportation = $("input:radio[name=transportation]:checked").val();
+  var name = $("#new-first-name").val();
+  var newTask = $("#newTaskName").val();
 
 
+  console.log(List(name, newTask));
+  });
 });
 
 
