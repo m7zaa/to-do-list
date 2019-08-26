@@ -2,7 +2,7 @@
 
 ## Date: , 2019
 
-#### By Susan Kralian
+#### By Susan Kralian and Micah Zaayer
 
 ## Description
  This program will
@@ -16,11 +16,11 @@
 
 |Specs Behavior|Input|Output|
 |-|-|-|
-|User will only be able to |A|invalid-NAN|
-|User will |4000|invalid number|
-User will |1|I|
-User will  |8|VIII|
-User will |9|IX|
+|User will be able to create and store name into the list program. |list.name|Micah|
+|User will be able to add/remove tasks from their lists |task.shopping|shopping|
+User will be able to mark specific tasks as complete|task.status|complete|
+User will be able to search for uncompleted tasks |list.toDo|Shopping, go to code school, do homework
+
 
 
 
