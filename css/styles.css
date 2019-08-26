@@ -1,0 +1,33 @@
+#show-task {
+  display: none;
+}
+
+#
+.container {
+  text-align: center;
+}
+
+
+.jumbotron h1 {
+    text-align: center;
+    color: blue;
+}
+
+
+label {
+  display: inline-block;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.picker {
+  margin: 40px;
+}
+
+#task-inputs {
+
+}
+
+#details, #prioritize {
+  margin-left: 150px;
+}

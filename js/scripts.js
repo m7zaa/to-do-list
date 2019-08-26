@@ -47,7 +47,7 @@ List.prototype.updateStatus = function(name) {
   for (var i=0; i<this.task.length; i++) {
     if (this.task[i]) {
       if (this.task[i].name == name) {
-        this.status= "complete";
+        this.status = "complete";
         return;
       }
     }
@@ -72,6 +72,20 @@ List.prototype.deleteTask = function(name) {
 // this method deletes the task groceryList from myList
 myList.deleteTask("groceryList");
 
+
+
+
+
+
+
+
+
+
+
+$(document).ready(function() {
+
+
+});
 
 
 

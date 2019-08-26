@@ -1,36 +1,51 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/scripts.js"></script>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1>Address Book</h1>
-    <h2>Add a Contact:</h2>
-    <form id="new-contact">
-      <label for="new-first-name">First Name</label>
-      <input type="text" id="new-first-name">
-      <label for="new-last-name">Last Name</label>
-      <input type="text" id="new-last-name">
-      <label for="new-phone-number">Phone Number</label>
-      <input type="text" id="new-phone-number">
-      <button type="submit">Add</button>
-    </form>
-
-    <h2>Contacts:</h2>
-    <ul id="contacts">
-    </ul>
-
-    <div id="show-contact">
-      <p>First Name: <span class="first-name"></span></p>
-      <p>Last Name: <span class="last-name"></span></p>
-      <p>Phone Number: <span class="phone-number"></span></p>
-      <div id="buttons">
-      </div>
+<head>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <meta charset="utf-8">
+  <title>To-Do List</title>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>To-Do Lists</h1>
     </div>
-  </body>
+  <form id="form">
+    <label for="new-first-name">First Name</label>
+    <input type="text" id="new-first-name">
+    <div id="list-picker">
+      <input class="picker" type="radio"value="grocery">Grocery List
+      <input class="picker" type="radio"value="social">Social
+      <input class="picker" type="radio"value="work">Work
+      <input class="picker" type="radio" value="school">School
+      <input class="picker" type="radio" value="transportation">Transportation
+  </div>
+    <br>
+    <h3><span id="newTask">New Task:</span></h3>
+    <div id="task-inputs">
+    <label for="new-task-name">Task Name:</label>
+    <input type="text" id="new-task-name">
+    <label id="details" for="new-task-details">Details</label>
+    <input type="text" id="new-task-details">
+    <label id="prioritize" for="new-task-prioritization">Prioritization</label>
+    <select class="" name="">
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+    </select>
+  </div>
+    <br>
+    <button type="submit" name="button" class="btn btn-primary">Add Task</button>
+  </form>
+  <div id="show-task">
+    <p>Tasks:</p>
+    <ul> </ul>
+    <div id="buttons">
+    </div>
+  </div>
+</div>
+</body>
 </html>
