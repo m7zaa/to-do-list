@@ -3,42 +3,69 @@ function List(firstName, task) {
   this.task = task;
 }
 
+
+//creates entries
 var myToDo = new List("Susan", []);
 var myList = new List("Micah", []);
 
-// function Types(shopping, birthdays, friends, home, work, transportation) {
-//   this.shopping =  shopping;
-//   this.birthdays = birthdays;
-//   this.friends = friends;
-//   this.home = home;
-//   this.work = work;
-//   this.transportation = transportation;
-// }
 
-function Task(title, details, prioritize, status, type) {
-  this.title = title;
+
+//A constructer to create tasks.
+function createTask(name, details, prioritize, status) {
+  this.name = name;
   this.details = details
   this.prioritize = prioritize;
   this.status = status;
-  this.type = type;
 }
 
-var shopping = new Task ("food", ["apples", "cookies", "carrots", "kale", "sushi", "ice cream"], "medium", "not done", "Nom Nom Nom");
+//Creates a task
+var grocery = new title ("groceryList", ["apples", "cookies", "carrots", "kale", "sushi", "ice cream"], "medium", "not done");
 
 //this added the entire shopping object entry into Micah's list
-myList.task.push(shopping);
+myList.task.push(grocery);
 
 
-
-Task.prototype.findTask = function(title) {
-  for (var i=0; i< Task.length; i++) {
-    if (this.List[i]) {
-      if (this.Task[i].title) == title {
-        return this.Task[i];
+//Creates a method to find a task, searching by name
+List.prototype.findTask = function(name) {
+  for (var i=0; i<= this.task.length; i++) {
+    if (this.task[i]) {
+      if (this.task[i].name == name) {
+        return this.task[i];
     }
   }
 };
   return false
 }
 
+
+//This searches "myList" for a task with the name "groceryList"
+myList.findTask("groceryList");
+
+
+
+
+
+
 Task.prototype.deleteTask
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function Types(shopping, birthdays, friends, home, work, transportation) {
+  //   this.shopping =  shopping;
+  //   this.birthdays = birthdays;
+  //   this.friends = friends;
+  //   this.home = home;
+  //   this.work = work;
+  //   this.transportation = transportation;
+  // }
